@@ -1,59 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+ Sistema de Gestión de Reparaciones de Celulares
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicación web desarrollada con **Laravel y MySQL** para administrar reparaciones de dispositivos móviles. Permite registrar clientes, cargar equipos, describir fallas y realizar un seguimiento del estado de cada reparación.
 
-## About Laravel
+ Descripción del proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto fue desarrollado como práctica académica durante la carrera de Analista de Sistemas, con el objetivo de aplicar conceptos de desarrollo web, arquitectura MVC y operaciones CRUD.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+El sistema permite centralizar la información de las reparaciones y facilitar su administración mediante una interfaz sencilla e intuitiva.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ Funcionalidades
 
-## Learning Laravel
+ Registrar reparaciones: cargar los datos del cliente, marca, modelo y falla del dispositivo.
+ Listar reparaciones: visualizar todas las reparaciones registradas.
+ Consultar detalles: acceder a la información individual de cada reparación.
+ Editar registros: modificar los datos de una reparación existente.
+ Eliminar registros: eliminar reparaciones del sistema.
+ Seguimiento de estados: actualizar el estado de cada reparación.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+ Estados de reparación
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ Ingresado
+ En reparación
+ Reparado
+ Entregado
 
-## Laravel Sponsors
+ Tecnologías utilizadas
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+ Tecnología  Uso 
 
-### Premium Partners
+ PHP  Lenguaje de programación del backend 
+ Laravel  Framework de desarrollo web 
+ MySQL  Sistema de gestión de base de datos 
+ HTML5  Estructura de las vistas 
+ CSS3  Estilos y diseño de la interfaz 
+ Blade  Motor de plantillas de Laravel 
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+ Arquitectura
 
-## Contributing
+El proyecto utiliza el patrón **MVC (Modelo-Vista-Controlador)** proporcionado por Laravel.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ Modelo: gestiona los datos y las operaciones sobre las reparaciones.
+ Vista: presenta la información mediante plantillas Blade.
+ Controlador: procesa las solicitudes y coordina la lógica de la aplicación.
 
-## Code of Conduct
+También se utiliza Eloquent ORM para interactuar con la base de datos.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+ Instalación y ejecución
 
-## Security Vulnerabilities
+Para ejecutar el proyecto localmente, necesitás tener instalado PHP, Composer, MySQL y Laravel.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Clonar el repositorio:
 
-## License
+   ```bash
+   git clone URL_DEL_REPOSITORIO
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. Ingresar a la carpeta del proyecto:
+
+   ```bash
+   cd reparaciones-celulares
+   ```
+
+3. Instalar las dependencias:
+
+   ```bash
+   composer install
+   ```
+
+4. Crear el archivo de configuración:
+
+   ```bash
+   copy .env.example .env
+   ```
+
+5. Generar la clave de la aplicación:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+6. Configurar las credenciales de MySQL en el archivo `.env` y crear la base de datos `reparaciones`.
+
+7. Ejecutar las migraciones:
+
+   ```bash
+   php artisan migrate
+   ```
+
+8. Iniciar el servidor:
+
+   ```bash
+   php artisan serve
+   ```
+
+9. Abrir en el navegador:
+
+   ```text
+   http://127.0.0.1:8000
+   ```
+
+ Objetivo académico
+
+Este proyecto permitió poner en práctica conocimientos de PHP, Laravel, bases de datos relacionales, operaciones CRUD, validaciones y arquitectura MVC.
+
+
+
+Autor: Santiago Sanabria
+
+Proyecto académico  Analista de Sistemas
