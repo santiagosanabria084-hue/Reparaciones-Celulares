@@ -1,0 +1,113 @@
+## Trabajo Práctico Parcial N.º 2 - Sistema de Gestión de Reparaciones de Celulares.
+
+Alumno: Santiago Sanabria.
+Profesor: Nicolas Ariel Calderón.
+Fecha de entrega: 17/6/2026.
+Materia: Producción Web.
+
+## Sistema de Gestión de Reparaciones de Celulares
+
+## Descripción
+
+Aplicación web desarrollada en Laravel para administrar reparaciones de celulares en un servicio técnico.
+
+El sistema permite registrar, visualizar, modificar y eliminar reparaciones, almacenando toda la información en una base de datos MySQL.
+
+
+
+## Tecnologías Utilizadas
+
+ Laravel
+ PHP
+ phpMyAdmin
+ Blade Templates
+ Eloquent ORM
+ HTML
+ CSS
+
+
+
+ ## Funcionalidades
+
+ ## Listado de reparaciones
+
+Permite visualizar todas las reparaciones registradas.
+
+ ## Registrar reparación
+
+Permite cargar una nueva reparación indicando:
+
+ Nombre del cliente
+ Marca del celular
+ Modelo del celular
+ Descripción de la falla
+ Fecha de ingreso
+ Estado de la reparación
+
+## Ver detalle
+
+Muestra toda la información de una reparación específica.
+
+ ## Modificar reparación
+
+Permite editar los datos de una reparación existente.
+
+ ## Eliminar reparación
+
+Permite eliminar una reparación registrada.
+
+
+
+ ## Estados disponibles
+
+ Ingresado
+ En reparación
+ Reparado
+ Entregado
+
+
+
+ ## Base de Datos
+
+ Tabla principal:
+
+ reparaciones
+
+ Campos:
+
+ id
+ cliente
+ marca
+ modelo
+ falla
+ fecha_ingreso
+ estado
+ created_at
+ updated_at
+
+
+
+ ## Arquitectura
+
+El proyecto fue desarrollado utilizando el patrón MVC (Modelo - Vista - Controlador).
+
+ Modelo
+
+ Reparacion
+
+ Controlador
+
+ReparacionController
+
+Vistas
+
+index.blade.php
+create.blade.php
+edit.blade.php
+show.blade.php
+
+
+
+
+
+
